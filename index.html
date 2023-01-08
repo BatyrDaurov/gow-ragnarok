@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>God Of War RAGNAROK | Landing-page</title>
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="site-container">
+      <header class="header">
+  <div class="container header__container">
+    <div class="header__menu menu">
+      <div class="menu__logo">
+        <a href="">
+          <picture>
+            <source type="image/webp" srcset="./img/logo.webp" />
+            <img src="./img/logo.png" alt="GOW-Ragnarok | Logo" />
+          </picture>
+        </a>
+      </div>
+      <nav class="menu__nav nav" data-menu>
+        <a href="#characters" class="nav__link" data-menu-item>Characters</a>
+        <a href="#history" class="nav__link" data-menu-item>History</a>
+        <a href="#weapons" class="nav__link" data-menu-item>Weapons</a>
+        <a
+          href="https://www.playstation.com/ru-ua/games/god-of-war-ragnarok/"
+          class="nav__link primary-button"
+          data-menu-item
+          >Buy now</a
+        >
+      </nav>
+      <div class="burger" data-burger>
+        <span class="burger__line"></span>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="hero__info">
+        <h1 class="hero__title">A darker and more primitive world</h1>
+        <p class="hero__text">
+          From the marble and ornate columns of Olympus to the forests, this is
+          a new realm, with its own species of creatures, monsters and gods.
+        </p>
+        <div class="hero__links">
+          <a
+            href="https://www.playstation.com/ru-ua/games/god-of-war-ragnarok/"
+            class="nav__link primary-button"
+            >Buy now</a
+          >
+          <a href="#characters" class="hero__btn primary-button btn-reset"
+            >knew more</a
+          >
+        </div>
+      </div>
+      <div class="hero__right">
+        <div id="filter-black-right"></div>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="./img/hero-poster.webp 1x, ./img/hero-poster@2x.webp 2x"
+          />
+          <img
+            class="hero__poster"
+            src="./img/hero-poster.png"
+            srcset="./img/hero-poster.png 1x, ./img/hero-poster@2x.png 2x"
+            alt="Kratos and Atreus | GOW-poster"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+  <div id="filter-black"></div>
+</header>
+
+      <main class="main">
+        <section class="characters" id="characters">
+  <div class="container characters__container">
+    <h2 class="characters__title section-title">
+      The Greatest Heroes of the Nine Realms
+    </h2>
+    <div class="characters__slider">
+      <div class="nav-wrapper">
+        <div class="swiper-button-prev">
+          <svg
+            height="30"
+            width="30"
+            viewbox="0 0 30 30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="./img/sprite.svg#slider-left-arrow"></use>
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg
+            height="30"
+            width="30"
+            viewbox="0 0 30 30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="./img/sprite.svg#slider-right-arrow"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="swiper" id="charactersSlider">
+        <div class="swiper-wrapper">
+          <div class="characters__item swiper-slide">
+            <div class="character">
+              <picture class="character__img">
+                <source
+                  type="image/webp"
+                  loading="lazy"
+                  srcset="
+                    ./img/characters/kratos.webp    1x,
+                    ./img/characters/kratos@2x.webp 2x
+                  "
+                  alt="Kratos"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/characters/kratos.png"
+                  alt="Kratos"
+                />
+              </picture>
+              <div class="character__wrapper">
+                <h2 class="character__title">Kratos</h2>
+              </div>
+            </div>
+          </div>
+          <div class="characters__item swiper-slide">
+            <div class="character">
+              <picture class="character__img">
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/characters/atreus.webp   1x,
+                    ./img/characters/atres@2x.webp 2x
+                  "
+                  loading="lazy"
+                  alt="atreus"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/characters/atreus.png"
+                  alt="Atreus"
+                />
+              </picture>
+              <div class="character__wrapper">
+                <h2 class="character__title">Atreus</h2>
+              </div>
+            </div>
+          </div>
+          <div class="characters__item swiper-slide">
+            <div class="character">
+              <picture class="character__img">
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/characters/freya.webp    1x,
+                    ./img/characters/freya@2x.webp 2x
+                  "
+                  alt="Freya"
+                />
+                <img src="./img/characters/freya.png" alt="Kratos" />
+              </picture>
+              <div class="character__wrapper">
+                <h2 class="character__title">Freya</h2>
+              </div>
+            </div>
+          </div>
+          <div class="characters__item swiper-slide">
+            <div class="character">
+              <picture class="character__img">
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/characters/angrboda.webp    1x,
+                    ./img/characters/angrboda@2x.webp 2x
+                  "
+                  loading="lazy"
+                  alt="Angrboda"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/characters/angrboda.png"
+                  alt="Kratos"
+                />
+              </picture>
+              <div class="character__wrapper">
+                <h2 class="character__title">Angrboda</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="history" id="history">
+  <div class="container history__container">
+    <ul class="list-reset history__list">
+      <li class="history__item" data-history-value="1">
+        <img src="./img/banner_01.jpg" alt="Banner GOW" />
+      </li>
+      <li class="history__item" data-history-value="2">
+        <img src="./img/banner_02.jpg" alt="Banner GOW" />
+      </li>
+      <li class="history__item" data-history-value="3">
+        <img src="./img/banner_03.jpg" alt="Banner GOW" />
+      </li>
+    </ul>
+    <div class="history__slider">
+      <div class="swiper" id="historySlider">
+        <div class="swiper-wrapper">
+          <div class="history__item swiper-slide">
+            <img
+              src="./img/banner_01.jpg"
+              data-history-value="1"
+              alt="Banner GOW"
+            />
+          </div>
+          <div class="history__item swiper-slide">
+            <img
+              src="./img/banner_02.jpg"
+              data-history-value="2"
+              alt="Banner GOW"
+            />
+          </div>
+          <div class="history__item swiper-slide">
+            <img
+              src="./img/banner_03.jpg"
+              data-history-value="3"
+              alt="Banner GOW"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="history__info">
+      <h2 class="history__title">Lute in the Nordic Kingdom</h2>
+      <div class="history__text">
+        <p>
+          With revenge against the gods of Olympus in the distant past, Kratos
+          now lives as a mortal in the realm of Norse gods and monsters.
+        </p>
+        <p>
+          It is in this harsh, unforgiving world that he must fight to
+          survive… and teach his son to do the same.
+        </p>
+      </div>
+    </div>
+  </div>
+  <picture>
+    <source
+      type="image/webp"
+      srcset="./img/history-bg.webp 1x"
+      aria-hidden="true"
+    />
+    <img
+      class="history__background"
+      src="./img/history-bg.png"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+        <section class="weapons" id="weapons">
+  <div class="container weapons__container">
+    <h2 class="weapons__title section-title">Legendary Weapons</h2>
+    <ul class="weapons__list list-reset">
+      <li class="weapon">
+        <div class="weapon__info">
+          <h2 class="weapon__title">Refined Rune Power</h2>
+          <p class="weapon__text">
+            New Abilities Let Kratos Use His Ax in New Ways
+          </p>
+          <a href="#" class="weapon__link primary-button">Know more</a>
+        </div>
+        <div class="weapon__picture">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="./img/axe.webp 1x"
+              alt="Leviathan Axe GOW | Weapon of Kratos" />
+            <img src="./img/axe.png" alt="Leviathan Axe GOW | Weapon of Kratos"
+          /></picture>
+        </div>
+      </li>
+      <li class="weapon">
+        <div class="weapon__info">
+          <h2 class="weapon__title">More than a boy with a bow</h2>
+          <p class="weapon__text">
+            Atreus has improved his archery skills to unleash new attacks
+          </p>
+          <a href="#" class="weapon__link primary-button">Know more</a>
+        </div>
+        <div class="weapon__picture">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="./img/bow.webp 1x"
+              alt="Bow GOW | Weapon of Atreus" />
+            <img src="./img/bow.png" alt="Bow GOW | Weapon of Atreus"
+          /></picture>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      </main>
+
+      <footer class="footer">
+  <div class="container footer__container">
+    <h4>made by Batyr Daurov</h4>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>
