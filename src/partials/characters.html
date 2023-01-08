@@ -1,0 +1,122 @@
+<section class="characters" id="characters">
+  <div class="container characters__container">
+    <h2 class="characters__title section-title">
+      The Greatest Heroes of the Nine Realms
+    </h2>
+    <div class="characters__slider">
+      <div class="nav-wrapper">
+        <div class="swiper-button-prev">
+          <svg
+            height="30"
+            width="30"
+            viewbox="0 0 30 30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="./img/sprite.svg#slider-left-arrow"></use>
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg
+            height="30"
+            width="30"
+            viewbox="0 0 30 30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="./img/sprite.svg#slider-right-arrow"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="swiper" id="charactersSlider">
+        <div class="swiper-wrapper">
+          <div class="characters__item swiper-slide">
+            <div class="character">
+              <picture class="character__img">
+                <source
+                  type="image/webp"
+                  loading="lazy"
+                  srcset="
+                    ./img/characters/kratos.webp    1x,
+                    ./img/characters/kratos@2x.webp 2x
+                  "
+                  alt="Kratos"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/characters/kratos.png"
+                  alt="Kratos"
+                />
+              </picture>
+              <div class="character__wrapper">
+                <h2 class="character__title">Kratos</h2>
+              </div>
+            </div>
+          </div>
+          <div class="characters__item swiper-slide">
+            <div class="character">
+              <picture class="character__img">
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/characters/atreus.webp   1x,
+                    ./img/characters/atres@2x.webp 2x
+                  "
+                  loading="lazy"
+                  alt="atreus"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/characters/atreus.png"
+                  alt="Atreus"
+                />
+              </picture>
+              <div class="character__wrapper">
+                <h2 class="character__title">Atreus</h2>
+              </div>
+            </div>
+          </div>
+          <div class="characters__item swiper-slide">
+            <div class="character">
+              <picture class="character__img">
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/characters/freya.webp    1x,
+                    ./img/characters/freya@2x.webp 2x
+                  "
+                  alt="Freya"
+                />
+                <img src="./img/characters/freya.png" alt="Kratos" />
+              </picture>
+              <div class="character__wrapper">
+                <h2 class="character__title">Freya</h2>
+              </div>
+            </div>
+          </div>
+          <div class="characters__item swiper-slide">
+            <div class="character">
+              <picture class="character__img">
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/characters/angrboda.webp    1x,
+                    ./img/characters/angrboda@2x.webp 2x
+                  "
+                  loading="lazy"
+                  alt="Angrboda"
+                />
+                <img
+                  loading="lazy"
+                  src="./img/characters/angrboda.png"
+                  alt="Kratos"
+                />
+              </picture>
+              <div class="character__wrapper">
+                <h2 class="character__title">Angrboda</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

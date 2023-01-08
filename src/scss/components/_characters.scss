@@ -1,0 +1,108 @@
+@import './../mixins';
+.characters {
+    position: relative;
+    &__slider {
+        position: relative;
+        margin-top: 60px;
+        @include tablet {
+            margin-top: 5rem;
+        }
+    }
+    &__item {
+        max-width: 380px;
+        min-height: 226px;
+        &.swiper-slide-active {
+            .character__img {
+                padding: 1px;
+            }
+            .character__wrapper{
+                border: 1px solid var(--primary-color);
+            }
+        }
+    }
+    &__title {
+        text-align: center;
+        @include tablet {
+            font-size: 38px!important;
+            line-height: 50px!important;
+            margin-bottom: 5px!important;
+        }
+    }
+
+    .swiper-wrapper {
+        align-items: flex-end;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -82px;
+        svg {
+            fill: #fff;
+        }
+        &::after {
+            content: '';
+        }
+    }
+    .swiper-button-prev{
+        left: -82px;
+    }
+    @include desktop {
+        .nav-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: static;
+            height: 50px;
+            width: 50px;
+            background-color: #e1e1e1;
+            border-radius: 50%;
+            svg {
+                fill: var(--card-color);
+            }
+        }
+    }
+}
+.character {
+    display: flex;
+    position: relative;
+    width: 368px;
+    color: #fff;
+    @include mobile{
+        width: 100%;
+    }
+    &__wrapper {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 420px;
+        margin-top: auto;
+        background-color: var(--card-color);
+    }
+    &__img {
+        width: 368px;
+        z-index: 20;
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__title {
+        position: absolute;
+        top: 89%;
+        left: 50%;
+        transform: translate(-50%, -89%);
+        margin: 0;
+        z-index: 30;
+        font-family: Cinzel;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 43px;
+        text-transform: uppercase;
+    }
+}

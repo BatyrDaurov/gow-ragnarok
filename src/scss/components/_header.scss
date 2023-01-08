@@ -1,0 +1,231 @@
+@import './../mixins';
+.header {
+    position: relative;
+    min-height: 885px;
+    background: url('./../img/hero-bg.png');
+    @include lg-desktop {
+        min-height: 700px;
+    }
+    @include big-desktop {
+        min-height: 650px;
+    }
+    @include tablet {
+        min-height: 0;
+    }
+    .menu {
+        @include flex-all-sb;
+        height: 136px;
+        &__logo {
+            @include mobile {
+                width: 170px;
+            }
+        }
+    }
+    &__container {
+        max-width: 1750px;
+        height: 100%;
+    }
+}
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    &__link {
+        font-family: 'Cinzel';
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        text-decoration: none;
+
+        color: #FFFFFF;
+        @include tablet {
+            font-size: 24px;
+        }
+    }
+    @include tablet {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 50;
+        height: 100vh;
+        width: 100vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background-color: var(--background-color);
+    }
+    &--active {
+        left: 0;
+    }
+}
+.hero {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: calc(100% - 136px);
+    padding: 0 100px;
+    @include lg-desktop {
+        padding: 0 20px;
+        &__right {
+            position: relative;
+        }
+    }
+    @include tablet {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem;
+        text-align: center;
+    }
+    @include mobile{
+        padding: 0 10px;
+    }
+    &__poster {
+        position: absolute;
+        right: -100px;
+        bottom: 0;
+        z-index: 15;
+        @include lg-desktop {
+            width: 100%;
+            height: 100%;
+            right: 0;
+            object-fit: cover;
+        }
+        @include big-desktop {
+            height: 85%;
+        }
+        @include tablet {
+            object-fit: contain;
+            height: 100%;
+        }
+        @include mobile {
+            object-fit: cover;
+        }
+    }
+    &__info {
+        margin-top: 102px;
+        @include big-desktop {
+            padding-right: 5em;
+        }
+        @include tablet {
+            margin-top: 20px;
+            padding: 0;
+        }
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 16px;
+        max-width: 880px;
+        font-family: Cinzel;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 58px;
+        @include lg-desktop {
+            font-size: 54px;
+            margin-bottom: 10px;
+        }
+        @include big-desktop {
+            font-size: 38px;
+            line-height: 50px;
+            margin-bottom: 5px;
+        }
+        @include mobile {
+            font-size: 32px!important;
+            line-height: 38px!important;
+            text-align: left!important;
+        }
+    }
+    &__text {
+        margin: 0;
+        margin-bottom: 24px;
+        max-width: 630px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 29px;
+        @include lg-desktop {
+            max-width: 580px;
+        }
+        @include big-desktop {
+            max-width: 500px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 24px;
+        }
+        @include tablet {
+            max-width: none;
+        }
+        @include mobile {
+            font-size: 14px!important;
+            margin-bottom: 18px!important;
+            line-height: 22px!important;
+            text-align: justify!important;
+        }
+    }
+    &__links {
+        height: 56px;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        @include tablet {
+            width: 100%;
+            justify-content: center;
+        }
+        @include mobile {
+            justify-content: space-between;
+            gap: 0;
+            .primary-button {
+                width: 100%;
+                padding: 20px 0;
+                border-radius: 0;
+                border: 1px solid transparent;
+            }
+        }
+    }
+    &__btn {
+        background: transparent!important;
+        color: #fff!important;
+        border: 1px solid #fff!important;
+        &:hover {
+            background: #f0f0f0!important;
+            color: #000!important;
+        }
+    }
+}
+.burger {
+    @include burger;
+    z-index: 51;
+    display: none;
+    @include tablet{
+        display: block;
+    }
+}
+#filter-black,
+#filter-black-right {
+    width: 100%;
+    height: 156px;
+    position: absolute;
+    left: 0;
+    bottom: -55px;
+    z-index: 55;
+    pointer-events: none;
+
+    background: var(--background-color);
+    filter: blur(40px);
+    @include big-desktop {
+        height: 100px;
+    }
+}
+#filter-black-right {
+    display: none;
+    height: 100%;
+    width: 100px;
+    bottom: 0;
+    left: -30px;
+    filter: blur(20px);
+    @include mobile {
+        display: block;
+    }
+
+}

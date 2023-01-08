@@ -1,0 +1,129 @@
+@import './../mixins';
+.history {
+    position: relative;
+    // height: 885px;
+    margin: auto;
+    margin-top: 350px;
+    color: #FFFFFF;
+    @include mobile {
+        margin-top: 220px;
+    }
+    &__container {
+        @include flex-all-sb;
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+    &__background {
+        position: absolute;
+        top: -19%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        @include lg-desktop {
+            width: 80%;
+            top: -12%;    
+        }
+        @include tablet {
+            width: 100%;
+            top: 15%;
+            opacity: 0.25;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include tablet {
+            display: none;
+        }
+    }
+    &__slider {
+        height: auto;
+        width: 100%;
+        display: none;
+        margin-bottom: 2rem;
+        @include tablet {
+            display: block;
+        }
+        .swiper-slide-active {
+            img {
+                opacity: 1;
+            }
+        }
+        .history__item {
+            img {
+                pointer-events: none;
+            }
+        }
+    }
+    &__item {
+        cursor: pointer;
+        width: 368px;
+        height: 207px;
+        border-radius: 4px;
+        background-color: #000;
+        img {
+            opacity: 0.75;
+            border-radius: inherit;
+            transition: 0.3s;
+            @include tablet {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+                border-radius: 4px!important;
+            }
+        }
+        &:hover {
+            img {
+                opacity: 1;
+            }
+        }
+        @include tablet {
+            width: auto;
+            height: auto!important;
+            border-radius: 4px!important;
+        }
+    }
+    &__info {
+        padding: 0 20px 118px 0;
+        @include tablet {
+            width: 100%;
+            padding: 0;
+        }
+    }
+    &__title {
+        max-width: 385px;
+        margin: 0;
+        margin-bottom: 16px;
+        font-family: 'Cinzel';
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 65px;
+        @include tablet {
+            max-width: 700px;
+        }
+        @include mobile {
+            font-size: 38px;
+            line-height: 44px;
+        }
+    }
+    &__text {
+        margin: 0;
+        max-width: 410px;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        @include mobile {
+            line-height: 140%;
+        }
+        p {
+            margin: 0;
+            &:not(:last-child){
+                margin: 0;
+                margin-bottom: 1em;
+            }
+        }
+    }
+}

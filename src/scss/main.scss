@@ -1,0 +1,47 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "vendor";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/footer";
+@import "./components/characters";
+@import "./components/history";
+@import "./components/weapons";
+
+:root {
+    --primary-color: #5092D2;
+    --background-color: #16161A;
+    --card-color: #27272E;
+}
+
+.primary-button {
+  padding: 18.5px 32px;
+  border-radius: 5px;
+
+  font-family: 'Cinzel';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  text-decoration: none;
+  
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  transition: 0.15s linear;
+  &:hover {
+    background-color: #57a1e8;
+    color: #fff;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+}
+.section-title {
+  margin: 0;
+  font-family: 'Cinzel';
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 65px;
+  color: #FFFFFF;
+}
